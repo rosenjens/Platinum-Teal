@@ -18,9 +18,7 @@ var config = {
         loader : 'babel'
       }
     ]
-  },
-  devServer: {
-      inline: true,
-      port: 8080
-   }
+  }
 };
+
+module.exports = config;

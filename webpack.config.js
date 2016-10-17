@@ -5,10 +5,11 @@ var BUILD_DIR = path.resolve(__dirname, 'public');
 var APP_DIR = path.resolve(__dirname, 'src');
 
 var config = {
-  entry: APP_DIR + '/index.jsx',
+  entry: {index: APP_DIR + '/index',
+          console: APP_DIR + '/console'},
   output: {
     path: BUILD_DIR,
-    filename: 'bundle.js'
+    filename: '[name].js'
   },
   module : {
     loaders : [
@@ -16,8 +17,15 @@ var config = {
         test : /\.jsx?/,
         include : APP_DIR,
         loader : 'babel'
+      },
+      {
+        test: /\.scss$/,
+        loader: "css-loader!sass-loader"
       }
     ]
+  },
+  resolve: {
+    extensions: ['', '.js', '.jsx', '.css', '.scss']
   }
 };
 

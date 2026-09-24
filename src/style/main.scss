@@ -1,17 +1,46 @@
-@import url('https://fonts.googleapis.com/css?family=Bungee+Shade|Chathura:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+$background: rgb(22, 30, 39);
 
 body {
   margin: 0;
-  background: rgb(22, 30, 39);
+  background: $background;
 }
 
 .console {
   min-height: 100vh;
   box-sizing: border-box;
   padding: 8px 12px;
-  background: rgb(22, 30, 39);
+  background: $background;
   color: azure;
-  font-size: 20px;
-  font-weight: 400;
-  font-family: Chathura, serif;
+  font-size: 16px;
+  font-family: 'Source Code Pro', monospace;
+  cursor: text;
+}
+
+.line {
+  min-height: 1.4em;
+  line-height: 1.4;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.input-line {
+  display: flex;
+
+  span {
+    white-space: pre;
+  }
+
+  input {
+    flex: 1;
+    min-width: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    caret-color: azure;
+  }
 }

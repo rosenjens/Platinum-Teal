@@ -11,6 +11,7 @@ npm install
 npm run dev      # start the dev server at http://localhost:5173
 npm run build    # production build into dist/
 npm run preview  # serve the production build
+npm test         # run the unit tests
 ```
 
 - `/` is the console.

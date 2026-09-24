@@ -11,10 +11,15 @@ describe('runCommand', () => {
         expect(output).toContain('help');
         expect(output).toContain('echo');
         expect(output).toContain('clear');
+        expect(output).toContain('solar');
     });
 
     it('asks to clear the screen', () => {
         expect(runCommand('clear')).toEqual({ clear: true });
+    });
+
+    it('opens the solar system', () => {
+        expect(runCommand('solar')).toEqual({ open: './solarsystem.html' });
     });
 
     it('prints nothing for blank input', () => {

@@ -1,5 +1,6 @@
 // Each command takes its arguments and returns the lines to print.
-// A command may instead return { clear: true } to wipe the screen.
+// A command may instead return { clear: true } to wipe the screen,
+// or { open: url } to navigate to another page.
 export const commands = {
     help: {
         description: 'List available commands',
@@ -10,6 +11,10 @@ export const commands = {
     echo: {
         description: 'Print its arguments',
         run: (args) => [args.join(' ')],
+    },
+    solar: {
+        description: 'Open the solar system',
+        run: () => ({ open: './solarsystem.html' }),
     },
     clear: {
         description: 'Clear the screen',

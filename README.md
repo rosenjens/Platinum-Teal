@@ -15,4 +15,4 @@ npm test         # run the unit tests
 ```
 
 - `/` is the console.
-- `/solarsystem.html` is the solar system.
+- `/solarsystem.html` is the solar system. Type `solar` in the console to open it.

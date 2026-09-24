@@ -19,6 +19,10 @@ export default function Console() {
 
     function submit() {
         const result = runCommand(input);
+        if (result.open) {
+            window.location.assign(result.open);
+            return;
+        }
         if (result.clear) {
             setLines([]);
         } else {
